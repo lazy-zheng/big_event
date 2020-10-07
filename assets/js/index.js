@@ -12,6 +12,8 @@ $(function () {
             // headers: {
             //     Authorization: localStorage.getItem('token') || '',
             // },
+            //  ajax请求是异步的，async 将这个请求 设定为同步请求
+            async: false,
             success: function (res) {
                 // console.log(res);
                 if (res.status !== 0) return layui.layer.msg('获取用户信息失败');
